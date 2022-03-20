@@ -23,19 +23,20 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 
    const { isLoading, error, data } = useQuery('repoData', () =>
 
-     fetch('https://swapi.dev/api/').then(res => res.json())
+     fetch('https://swapi.dev/api/people/').then(res => res.json())
    );
 
    if (isLoading) return 'Loading...';
 
    if (error) return 'An error has occurred: ' + error.message;
-
+    console.log(data);
    return (
 
     <div className="App">
       <Header />
       <div>
-        {/* <StarwarsListPage /> */}
+        
+        <StarwarsListPage people={data.results}></StarwarsListPage>
       </div>
       <Footer />
     </div>
