@@ -1,10 +1,16 @@
 import StarwarsList from "./starwarsList/StarwarsList";
+import Search from "./Search/search";
 import React from "react";
 
 const StarwarsListPage = ({people}) => {
+
+    const [value, setValue] = React.useState("");
     
     return (
-        <StarwarsList peopleList={people}></StarwarsList>
+        <div>
+            <Search value="" setValue=""></Search>
+            <StarwarsList peopleList={people}></StarwarsList>
+        </div>
         
     );
 };
