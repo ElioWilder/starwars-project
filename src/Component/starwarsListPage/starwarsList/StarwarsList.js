@@ -1,13 +1,11 @@
 import StarwarsCard from "./starwarsCard/StarwarsCard";
 
 const StarwarsList = ({peopleList}) => {
-    const filterPeople = peopleList.filter((element) => {
-        return element.name.toLowerCase().includes(peopleList.toLowerCase());
-    });
+    
 
-    const starwarsList = filterPeople.map((element) => {
+    const starwarsList = peopleList.map((element) => {
         return (
-            <StarwarsCard person={peopleList}></StarwarsCard>
+            <StarwarsCard person={element} key={element.name}></StarwarsCard>
         );
     })
     return (
