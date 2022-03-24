@@ -1,10 +1,11 @@
 import logo from './logo.png';
+import  Box  from '@mui/material/Box';
 
 const Header = () => {
-    return <header className="App-header">
+    return <Box className="App-header" sx={{display: 'flex', flexDirection: 'row', pl: 2}}>
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>Le wiki des étoiles</p>
-            </header>
+            </Box>
 };
 
 export default Header;

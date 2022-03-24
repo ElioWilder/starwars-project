@@ -1,4 +1,5 @@
 .bg {
     background-image: url('nuit-des-etoiles.jpeg');
+    background-size: cover;
     
 }
