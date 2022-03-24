@@ -1,5 +1,6 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 
@@ -7,9 +8,9 @@ const StarwarsCard = ({person}) => {
 
     if(person.gender !== 'n/a'){
         return (
-            <Card sx={{ width: 160, height: 160}}>
+            <Card sx={{ width: 200, height: 200, p: 2, m: 2}}>
+                <CardHeader title={person.name} sx={{textAlign: 'center'}} />
                 <CardContent>
-                    <div>{person.name}</div>
                     <div>{person.gender}</div>
                     <div>{person.birth_year}</div>
                 </CardContent>
@@ -20,9 +21,9 @@ const StarwarsCard = ({person}) => {
         );
     } else {
         return (
-        <Card sx={{ width: 160, height: 160}}>
+        <Card sx={{ width: 200, height: 200, p: 2, m: 2}}>
+                <CardHeader title={person.name} sx={{textAlign: 'center'}} />
                 <CardContent>
-                    <div className="starwars-name">{person.name}</div>
                     <div>Robot</div>
                     <div>{person.birth_year}</div>
                 </CardContent>

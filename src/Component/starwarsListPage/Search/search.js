@@ -1,6 +1,6 @@
 import  React  from "react";
 import Box from '@mui/material/Box';
-import TextField from "@mui/material/TextField";
+import Input from "@mui/material/Input";
 
 
 const Search = ({value, setValue}) => {
@@ -11,7 +11,7 @@ const Search = ({value, setValue}) => {
   }
     return  (
             <Box sx={{p: 2}}>
-              <TextField label="Recherche" sx={{width: 500, backgroundColor: "white"}} type="text" placeholder="Trouver un personnage" value={value} onChange={onChange}></TextField>
+              <Input label="Recherche" sx={{width: 500, backgroundColor: "white"}} variant="outlined" color="warning" type="text" placeholder="Trouver un personnage" value={value} onChange={onChange}></Input>
             </Box>
     );    
   };

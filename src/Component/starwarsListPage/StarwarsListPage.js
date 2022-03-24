@@ -2,6 +2,7 @@ import StarwarsList from "./starwarsList/StarwarsList";
 import Search from "./Search/search";
 import React from "react";
 import Box from '@mui/material/Box';
+import './style.css';
 
 const StarwarsListPage = ({people}) => {
 
@@ -13,7 +14,7 @@ const StarwarsListPage = ({people}) => {
 
 
     return (
-        <Box sx={{backgroundColor: "black"}}>
+        <Box className="bg">
             <Search value={value} setValue={setValue}></Search>
             <StarwarsList peopleList={filterPeople}></StarwarsList>
         </Box>
