@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './Component/Header/header.js';
 import Footer from './Component/Footer/footer.js';
 import StarwarsListPage from './Component/starwarsListPage/StarwarsListPage.js';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
  const queryClient = new QueryClient();
 
