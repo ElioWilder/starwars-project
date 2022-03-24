@@ -10,7 +10,7 @@ const Search = ({value, setValue}) => {
     console.log(e.target.value);
   }
     return  (
-            <Box sx={{p: 2}}>
+            <Box sx={{p: 2, m: 2}}>
               <Input label="Recherche" sx={{width: 500, backgroundColor: "white"}} variant="outlined" color="warning" type="text" placeholder="Trouver un personnage" value={value} onChange={onChange}></Input>
             </Box>
     );    
