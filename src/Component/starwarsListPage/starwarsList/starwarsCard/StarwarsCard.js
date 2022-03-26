@@ -3,9 +3,10 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const StarwarsCard = ({person}) => {
-
+    const id = Number.parseInt(person.url.substring('https://swapi.dev/api/people/'.length), 10);
     if(person.gender !== 'n/a'){
         return (
             <Card sx={{ width: 200, height: 200, p: 2, m: 2}}>
@@ -15,7 +16,7 @@ const StarwarsCard = ({person}) => {
                     <div>{person.birth_year}</div>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" color="primary" variant="contained">Plus D'info</Button>
+                    <Button size="small" color='secondary' variant="contained"><Link to={`/person/${id}`}>Plus D'info</Link></Button>
                 </CardActions>
             </Card>
         );
@@ -28,7 +29,7 @@ const StarwarsCard = ({person}) => {
                     <div>{person.birth_year}</div>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" color="primary" variant="contained">Plus D'info</Button>
+                    <Button size="small" color='secondary' variant="contained"><Link to={`/person/${id}`}>Plus D'info</Link></Button>
                 </CardActions>
             </Card>
         );    
