@@ -37,7 +37,7 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
    if (isLoading) return 'Loading...';
 
    if (error) return 'An error has occurred: ' + error.message;
-    console.log(data);
+    
    return (
 
     <div className="App">

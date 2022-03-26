@@ -19,7 +19,7 @@ const DetailsPage = () => {
 
    if (error) return 'An error has occurred: ' + error.message;
    const person = data; 
-   console.log(person); 
+    
     
    return (
        <Box sx={{display: 'flex', justifyContent: 'center', backgroundColor: '#b39ddb'}}>
