@@ -4,6 +4,7 @@ import CardHeader from '@mui/material/CardHeader';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 const StarwarsCard = ({person}) => {
     const id = Number.parseInt(person.url.substring('https://swapi.dev/api/people/'.length), 10);
